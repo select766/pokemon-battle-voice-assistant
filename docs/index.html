@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ポケモンバトル音声アシスタント</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div id="interface">
+        <div>
+          <button type="button" onclick="start()" id="start-button" disabled>
+            開始
+          </button>
+          <span
+            >ポケモンバトル音声アシスタントβ 剣盾対応
+            ポケモンの名前を音声入力</span
+          >
+          <span
+            >手入力:
+            <form onsubmit="keyboardInputSubmit(); return false;">
+              <input type="text" id="keyboard-input" /><input
+                type="submit"
+                value="送信"
+              /></form
+          ></span>
+        </div>
+        <div>
+          入力文: <span id="raw-text"></span> 認識結果:
+          <span id="recognized-text"></span>
+        </div>
+      </div>
+      <div id="found-content">
+        <div>
+          <span
+            ><a
+              href="https://github.com/select766/pokemon-battle-voice-assistant"
+              target="_blank"
+              rel="noopener"
+              id="found-page-url"
+              >https://github.com/select766/pokemon-battle-voice-assistant</a
+            ></span
+          >
+        </div>
+        <iframe id="found-page"></iframe>
+        <div id="readme">
+          <h1>ポケモンバトル音声アシスタント</h1>
+          <p>
+            ポケモンの名前などを音声入力すると、そのポケモンの情報を表示するアプリです。
+          </p>
+          <p>
+            現在のところ、ポケモン名に対応する基本情報の表示のみ行います。
+            表示されるコンテンツの発信元はアプリの開発者と無関係な場合があります。
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
